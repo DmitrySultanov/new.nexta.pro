@@ -14,11 +14,11 @@ export default function Home() {
               </video>
             </Box>
             <Grid size={{ md: 10, lg: 8 }}>
-              <Box className="sectionHomeIntroContent">
-                <Typography align="center" variant="h1">Прибыльный турбизнес без напряжения</Typography>
-                <Typography align="center" variant="body2">Готовые комплексные решения для онлайн-продаж и управления ресурсами компании</Typography>
+              <Box className="sectionHomeIntroContent sectionContentTitle">
+                <Typography align="center" variant="h1"><Typography className="span" component="span">Прибыльный турбизнес без напряжения</Typography></Typography>
+                <Typography align="center" variant="body2"><Typography className="span" component="span">Готовые комплексные решения для онлайн-продаж и управления ресурсами компании</Typography></Typography>
                 <Box sx={{display: 'flex', justifyContent: 'center', marginTop: '2rem'}}>
-                  <Button sx={{margin: '0 .5rem'}} variant="contained" color="success" size="large">Онлайн-продажи</Button>
+                  <Button sx={{margin: '0 .5rem'}} variant="contained" color="warning" size="large">Онлайн-продажи</Button>
                   <Button sx={{margin: '0 .5rem'}} variant="contained" color="primary" size="large">Управленческий учет</Button>
                 </Box>
               </Box>
