@@ -1,6 +1,7 @@
 import { Container, Grid, Box, Typography, Button, Card, CardMedia, CardContent } from "@mui/material";
 import Image from "next/image";
 import SyncIcon from '@mui/icons-material/Sync';
+import Masonry from '@mui/lab/Masonry';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import DirectionsRailwayIcon from '@mui/icons-material/DirectionsRailway';
 import HotelIcon from '@mui/icons-material/Hotel';
@@ -14,10 +15,27 @@ import CurrencyRubleIcon from '@mui/icons-material/CurrencyRuble';
 import StorageIcon from '@mui/icons-material/Storage';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import PieChartIcon from '@mui/icons-material/PieChart';
+import Link from "next/link";
 
 interface Props {}
 
 export default function page({}: Props) {
+
+    const Testimonials = [
+        {
+            id: 1,
+            author: 'Ольга Азанова',
+            position: 'Генеральный директор ООО "Инкорс"',
+            text: 'Мы используем NEXTA для обслуживания субагентов, а также в этой программе самостоятельно обслуживаются наши корпоративные клиенты. Поскольку я работаю в Канаде, а офис обслуживания в Москве, быть в курсе всех дел и событий было сложно, а с Nexta я всегда в курсе всех событий и проектов. Это очень удобно для контроля. Мы довольны данной системой и не жалеем, что ее приобрели. А еще важно, что система нравится и нашим клиентам. Nexta - хороший проект и наше будущее. Также хочется поблагодарить коллектив NEXTA за помощь во внедрении и настройке функционала системы оперучета FINEX. В момент внедрения казалось что все программисты NEXTA (как программисты 1С так и web- программисты) работают над внедрением системы на нашей фирме. Была проделана большая работа по внедрению, которая сейчас не дает сбоя."'
+        },
+        {
+            id: 2,
+            author: 'Татьяна Сухорукова',
+            position: 'Генеральный директор, ООО "Альбион"',
+            text: 'В последние годы клиенты все чаще спрашивают у агентства наличие онлайн-системы. А в крупных компаниях наличие онлайн-системы стало одним из обязательных пунктов запросов на тендер. Мы понимали, что онлайн онлайну рознь, поэтому уделили выбору программы значительное время. В итоге мы выбрали Nexta, потому, что в этой системе работать просто и удобно нам, а значит, просто и удобно будет и нашим клиентам. С помощью Nexta мы привлекли новых клиентов и почувствовали себя высокотехнологичной компанией. А в 2015 году мы расширили сотрудничество и получили дополнительно автоматическую выгрузку документов. Надеемся продолжать плодотворное сотрудничество с NEXTA.'
+        }
+    ]
+
     return <>
         <section className="sectionNextaIntro">
             <Container maxWidth="lg">
@@ -156,6 +174,102 @@ export default function page({}: Props) {
                             <Typography variant="body1">Статистика и аналитика</Typography>
                         </Grid>
                     </Grid>
+                </Grid>
+            </Container>
+        </section>
+        <section className="sectionNextaProviders">
+            <Container maxWidth="lg">
+                <Grid>
+                    <Box className="titleWrapper">
+                        <Typography variant="body1" sx={{fontSize: '.8rem', fontWeight: '600'}}>ПАРТНЕРЫ NEXTA</Typography>
+                        <Typography variant="h2" className="title">Поставщики контента</Typography>
+                        <Typography variant="body1">Nexta — сертифицированный разработчик и авторизованный партнёр глобальных систем бронирования, отельных консолидаторов и поставщиков других тревел-услуг</Typography>
+                    </Box>
+                    <Grid container className="list" alignItems="center" sx={{marginTop: '3rem'}}>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/amadeus.jpg" width="160" height="72" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/Mixvel.png" width="160" height="22" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/S7.png" width="160" height="72" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/travelport.png" width="160" height="120" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/aeroflot.png" width="160" height="46" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/hotelbook.png" width="160" height="120" alt="" />
+                        </Grid>
+
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/CB.png" width="160" height="28" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/rzd.png" width="160" height="78" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/aampa_logo.png" width="160" height="78" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/Ostrovok.png" width="160" height="66" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/acasse.jpg" width="160" height="130" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/rcr.jpg" width="160" height="68" alt="" />
+                        </Grid>
+
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/Multireisen.png" width="160" height="140" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/alfa.png" width="160" height="50" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/iway.png" width="160" height="70" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/U6.png" width="160" height="90" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/Bronevik.jpg" width="160" height="140" alt="" />
+                        </Grid>
+                        <Grid size={{ sm: 12, md: 4, lg: 2 }}>
+                            <Image src="/myagent.png" width="160" height="22" alt="" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Container>
+        </section>
+        <section className="sectionNextaFunctional">
+            <Container maxWidth="lg">
+                <Grid container justifyContent="center" textAlign="center">
+                    <Grid size={{ md: 12, lg: 8 }}>
+                        <Typography variant="h2" className="title">Функционал NEXTA</Typography>
+                        <Typography variant="body1">Обладателям NEXTA-технологий не страшны экономические перипетии. Добро пожаловать на NEXTA уровень.</Typography>
+                        <Box sx={{display: 'flex', justifyContent: 'center', marginTop: '2rem'}}>
+                            <Link href="/"><Button variant="contained" color="warning" size="large">ИЗУЧИТЬ ФУНКЦИОНАЛ NEXTA</Button></Link>
+                        </Box>
+                    </Grid>
+                </Grid>
+            </Container>
+        </section>
+        <section className="sectionNextaTestimonials">
+            <Container maxWidth="lg">
+                <Grid textAlign="center">
+                    <Typography variant="h2">Впечатления наших клиентов</Typography>
+                    <Masonry columns={2} spacing={4} className="masonry">
+                        {Testimonials.map((item, index) => (
+                            <Box key={index} className="masonryItem">
+                                {item.text}
+                            </Box>
+                            ))}
+                    </Masonry>
                 </Grid>
             </Container>
         </section>

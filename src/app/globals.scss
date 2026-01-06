@@ -56,7 +56,7 @@ a {
 }
 
 h2.MuiTypography-h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 h3.MuiTypography-h3  {
@@ -437,6 +437,33 @@ footer {
       font-size: 1.75rem;
       margin-bottom: 15px;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.sectionNextaProviders {
+
+  .titleWrapper {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+}
+
+.sectionNextaFunctional {
+  background-image: -webkit-linear-gradient(top, rgba(143, 184, 76, 0.9), rgba(143, 184, 76, 0.6));
+}
+
+.sectionNextaTestimonials {
+  .masonry {
+    &Item {
+      border-radius: 1rem;
+      border: 4px solid #708bab;
+      padding: 1rem;
     }
   }
 }
