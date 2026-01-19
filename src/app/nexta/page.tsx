@@ -267,6 +267,10 @@ export default function page({}: Props) {
                         {Testimonials.map((item, index) => (
                             <Box key={index} className="masonryItem">
                                 {item.text}
+                                <Box className="d-flex justify-center text-center" sx={{marginTop: '1rem'}}>
+                                    <Typography variant="body1">{item.author}</Typography>
+                                    <Typography variant="body2">{item.position}</Typography>
+                                </Box>
                             </Box>
                             ))}
                     </Masonry>
