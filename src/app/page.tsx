@@ -1,5 +1,6 @@
 import { Container, Grid, Box, Typography, Button, Card, CardMedia, CardContent } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -118,7 +119,7 @@ export default function Home() {
           </Grid>
           <Grid container sx={{marginTop: '3rem'}} justifyContent='center'>
             <Grid>
-              <Button variant="contained" color="primary">Изучить функционал NEXTA</Button>
+              <Button variant="contained" color="primary"><Link href="/nexta">Изучить функционал NEXTA</Link></Button>
             </Grid>
           </Grid>
         </Container>
@@ -140,7 +141,7 @@ export default function Home() {
           </Grid>
           <Grid container sx={{marginTop: '3rem'}} justifyContent='center'>
             <Grid>
-              <Button variant="contained" color="primary">Изучить функционал NEXTA</Button>
+              {/* <Button variant="contained" color="primary"><Link href="/nexta">Изучить функционал NEXTA</Link></Button> */}
             </Grid>
           </Grid>
         </Container>
@@ -162,7 +163,7 @@ export default function Home() {
           </Grid>
           <Grid container sx={{marginTop: '3rem'}} justifyContent='center'>
             <Grid>
-              <Button variant="contained" color="primary">Изучить функционал NEXTA</Button>
+              <Button variant="contained" color="primary"><Link href="/nexta">Изучить функционал NEXTA</Link></Button>
             </Grid>
           </Grid>
         </Container>
@@ -221,7 +222,7 @@ export default function Home() {
                 <Typography variant="h6" sx={{fontWeight: '600'}}>NEXTA</Typography>
                 <Typography variant="body1">Онлайн-система бронирования и управления деловыми поездками сотрудников корпоративных клиентов</Typography>
                 <Box className="productsBoxContentButtonWrapper">
-                  <Button variant="contained" color="primary">Подробнее</Button>
+                  <Button variant="contained" color="primary"><Link href="/nexta">Подробнее</Link></Button>
                 </Box>
               </Box>
             </Grid>
@@ -231,7 +232,7 @@ export default function Home() {
                 <Typography variant="h6" sx={{fontWeight: '600'}}>FINEX</Typography>
                 <Typography variant="body1">Управленческий учет в тревел-агентстве: автоматизация контроля расходов, отчетность и управление денежными потоками</Typography>
                 <Box className="productsBoxContentButtonWrapper">
-                  <Button variant="contained" color="primary">Подробнее</Button>
+                  <Button variant="contained" color="primary"><Link href="/finex">Подробнее</Link></Button>
                 </Box>
               </Box>
             </Grid>

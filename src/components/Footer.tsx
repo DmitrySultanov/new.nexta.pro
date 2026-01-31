@@ -17,11 +17,11 @@ export function Footer({}: Props) {
                     </Grid>
                     <Grid size={{ sm: 12, xl: 3 }}>
                         <ul className="menu">
-                            <li><Link href="">О нас</Link></li>
-                            <li><Link href="">Nexta</Link></li>
-                            <li><Link href="">Finex</Link></li>
-                            <li><Link href="">Главная</Link></li>
-                            <li><Link href="">Контакты</Link></li>
+                            <li><Link href="/about">О нас</Link></li>
+                            <li><Link href="/nexta">Nexta</Link></li>
+                            <li><Link href="/finex">Finex</Link></li>
+                            <li><Link href="/">Главная</Link></li>
+                            <li><Link href="/contacts">Контакты</Link></li>
                         </ul>
                     </Grid>
                     <Grid size={{ sm: 12, xl: 3 }}>
